@@ -80,7 +80,6 @@ a{color:var(--cobalt);text-underline-offset:3px;font-weight:600}
 .batt i:last-child{background:transparent}
 .fs{appearance:none;cursor:pointer;width:22px;height:20px;padding:0;flex:none;display:grid;place-items:center;color:var(--ink);border:1px solid #3c4350;border-radius:2px;background:linear-gradient(180deg,#fbfcfd,#d3d8df);box-shadow:inset 1px 1px 0 #fff,inset -1px -1px 0 #8d95a2}
 .fs:hover{color:var(--cobalt)}
-.fs:active{background:linear-gradient(180deg,#d3d8df,#fbfcfd)}
 .fs svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:square}
 .fs .x,.fs[aria-pressed="true"] .o{display:none}
 .fs[aria-pressed="true"] .x{display:block}
@@ -152,8 +151,15 @@ a{color:var(--cobalt);text-underline-offset:3px;font-weight:600}
 .tplate::before{content:"";width:8px;height:8px;flex:none;background:var(--acc);border:1px solid rgba(0,0,0,.45);box-shadow:inset 1px 1px 0 rgba(255,255,255,.55)}
 .tplate .ar{font-size:15px;color:var(--acc);text-transform:none;padding-left:10px;border-left:1px solid #a2a9b4;line-height:1}
 .tkeys{display:flex;gap:3px;margin-left:8px}
-.tkeys i{width:19px;height:17px;display:grid;place-items:center;font-style:normal;font-weight:800;font-size:11px;line-height:1;border:1px solid #3c4350;border-radius:2px;background:linear-gradient(180deg,#fbfcfd,#d3d8df);box-shadow:inset 1px 1px 0 #fff,inset -1px -1px 0 #8d95a2}
+.tkeys i,.tkeys button{appearance:none;padding:0;color:inherit;width:19px;height:17px;display:grid;place-items:center;font-style:normal;font-weight:800;font-size:11px;line-height:1;border:1px solid #3c4350;border-radius:2px;background:linear-gradient(180deg,#fbfcfd,#d3d8df);box-shadow:inset 1px 1px 0 #fff,inset -1px -1px 0 #8d95a2}
 .tkeys i:last-child{color:var(--rec)}
+.tkeys button{cursor:pointer}
+.tkeys button:hover{color:var(--cobalt)}
+.tkeys button:active,.fs:active{background:linear-gradient(180deg,#d3d8df,#fbfcfd)}
+.tkeys button:disabled{cursor:default;color:inherit}
+.tkeys svg{width:10px;height:10px;fill:none;stroke:currentColor;stroke-width:1.6}
+.tk-fs .x,.tk-fs[aria-pressed="true"] .o{display:none}
+.tk-fs[aria-pressed="true"] .x{display:block}
 .wbody{flex:1;min-height:0;display:grid;grid-template-columns:228px minmax(0,1fr);border:1px solid #5d6572;box-shadow:inset 1px 1px 0 #fff;background:var(--face)}
 .sbar{flex:none;display:flex;gap:3px;font-size:12px;color:var(--ink-dim);min-width:0}
 .sbar span{padding:1px 10px;box-shadow:inset 1px 1px 0 #8d95a2,inset -1px -1px 0 #fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -641,7 +647,7 @@ tr.hl td{background:#dfe7ff;font-weight:700}
     <div class="rec" aria-hidden="true"><i></i><span>REC</span></div>
     <div class="lcd lcd-clock" aria-label="Time in London"><small>SP</small><span id="tc">00:00:00</span><span id="clock">--/-- --:--</span></div>
     <div class="batt" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-    <button class="fs" id="fs" type="button" aria-label="Full screen" aria-pressed="false" title="Full screen" hidden>
+    <button class="fs" id="fs" type="button" data-fs aria-label="Full screen" aria-pressed="false" title="Full screen" hidden>
       <svg class="o" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 4.5V1h3.5M7.5 1H11v3.5M11 7.5V11H7.5M4.5 11H1V7.5"/></svg>
       <svg class="x" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 1v3.5H1M11 4.5H7.5V1M7.5 11V7.5H11M1 7.5h3.5V11"/></svg>
     </button>
@@ -676,7 +682,7 @@ tr.hl td{background:#dfe7ff;font-weight:700}
 <!-- ======================= 01 PROFILE ======================= -->
 <section class="page" id="pg-profile" data-key="profile" data-tint="70,74,140" role="tabpanel" aria-labelledby="t-profile">
   <div class="win" style="--acc:#5b5fd6">
-    <div class="tbar"><span class="tnum lcd">01</span><span class="tplate">Profile<span class="ar">دولتشاه بن علی</span></span><span class="tkeys" aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
+    <div class="tbar"><span class="tnum lcd">01</span><span class="tplate">Profile<span class="ar">دولتشاه بن علی</span></span><span class="tkeys"><i aria-hidden="true">_</i><button class="tk-fs" type="button" data-fs aria-label="Full screen" aria-pressed="false" title="Full screen"><svg class="o" viewBox="0 0 10 10" aria-hidden="true"><rect x="1.5" y="1.5" width="7" height="7"/></svg><svg class="x" viewBox="0 0 10 10" aria-hidden="true"><path d="M3.5 3.5V1.5h5v5h-2M1.5 3.5h5v5h-5z"/></svg></button><i aria-hidden="true">×</i></span></div>
     <div class="wbody">
       <nav class="rail" aria-label="Profile sections"></nav>
       <div class="scroll" tabindex="0">
@@ -799,7 +805,7 @@ tr.hl td{background:#dfe7ff;font-weight:700}
 <!-- ======================= 02 PLATES ======================= -->
 <section class="page" id="pg-plates" data-key="plates" data-tint="8,60,140" role="tabpanel" aria-labelledby="t-plates">
   <div class="win" style="--acc:#0285ff">
-    <div class="tbar"><span class="tnum lcd">02</span><span class="tplate">Plates · Training Nexus<span class="ar">دولتشاه بن علی</span></span><span class="tkeys" aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
+    <div class="tbar"><span class="tnum lcd">02</span><span class="tplate">Plates · Training Nexus<span class="ar">دولتشاه بن علی</span></span><span class="tkeys"><i aria-hidden="true">_</i><button class="tk-fs" type="button" data-fs aria-label="Full screen" aria-pressed="false" title="Full screen"><svg class="o" viewBox="0 0 10 10" aria-hidden="true"><rect x="1.5" y="1.5" width="7" height="7"/></svg><svg class="x" viewBox="0 0 10 10" aria-hidden="true"><path d="M3.5 3.5V1.5h5v5h-2M1.5 3.5h5v5h-5z"/></svg></button><i aria-hidden="true">×</i></span></div>
     <div class="wbody">
       <nav class="rail" aria-label="Plates sections"></nav>
       <div class="scroll" tabindex="0">
@@ -936,7 +942,7 @@ tr.hl td{background:#dfe7ff;font-weight:700}
 <!-- ======================= 03 DBZPINCH1105 ======================= -->
 <section class="page" id="pg-dbzpinch" data-key="dbzpinch" data-tint="84,24,100" role="tabpanel" aria-labelledby="t-dbzpinch">
   <div class="win" style="--acc:#b23fd9">
-    <div class="tbar"><span class="tnum lcd">03</span><span class="tplate">DBZPinch1105 · MHD<span class="ar">دولتشاه بن علی</span></span><span class="tkeys" aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
+    <div class="tbar"><span class="tnum lcd">03</span><span class="tplate">DBZPinch1105 · MHD<span class="ar">دولتشاه بن علی</span></span><span class="tkeys"><i aria-hidden="true">_</i><button class="tk-fs" type="button" data-fs aria-label="Full screen" aria-pressed="false" title="Full screen"><svg class="o" viewBox="0 0 10 10" aria-hidden="true"><rect x="1.5" y="1.5" width="7" height="7"/></svg><svg class="x" viewBox="0 0 10 10" aria-hidden="true"><path d="M3.5 3.5V1.5h5v5h-2M1.5 3.5h5v5h-5z"/></svg></button><i aria-hidden="true">×</i></span></div>
     <div class="wbody">
       <nav class="rail" aria-label="DBZPinch1105 sections"></nav>
       <div class="scroll" tabindex="0">
@@ -1077,7 +1083,7 @@ tr.hl td{background:#dfe7ff;font-weight:700}
 <!-- ======================= 04 FREE1105 + UNISPOUSE ======================= -->
 <section class="page" id="pg-free-unispouse" data-key="free-unispouse" data-tint="28,44,130" role="tabpanel" aria-labelledby="t-free-unispouse">
   <div class="win" style="--acc:#2448c4">
-    <div class="tbar"><span class="tnum lcd">04</span><span class="tplate">FREE1105 · UniSpouse<span class="ar">دولتشاه بن علی</span></span><span class="tkeys" aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
+    <div class="tbar"><span class="tnum lcd">04</span><span class="tplate">FREE1105 · UniSpouse<span class="ar">دولتشاه بن علی</span></span><span class="tkeys"><i aria-hidden="true">_</i><button class="tk-fs" type="button" data-fs aria-label="Full screen" aria-pressed="false" title="Full screen"><svg class="o" viewBox="0 0 10 10" aria-hidden="true"><rect x="1.5" y="1.5" width="7" height="7"/></svg><svg class="x" viewBox="0 0 10 10" aria-hidden="true"><path d="M3.5 3.5V1.5h5v5h-2M1.5 3.5h5v5h-5z"/></svg></button><i aria-hidden="true">×</i></span></div>
     <div class="wbody holo-split">
       <!-- FREE1105 -->
       <div class="col">
@@ -1240,7 +1246,7 @@ tr.hl td{background:#dfe7ff;font-weight:700}
 <!-- ======================= 05 WORK ======================= -->
 <section class="page" id="pg-work" data-key="work" data-tint="24,72,30" role="tabpanel" aria-labelledby="t-work">
   <div class="win" style="--acc:#1f8a4c">
-    <div class="tbar"><span class="tnum lcd">05</span><span class="tplate">Work · Languages · Interests<span class="ar">دولتشاه بن علی</span></span><span class="tkeys" aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
+    <div class="tbar"><span class="tnum lcd">05</span><span class="tplate">Work · Languages · Interests<span class="ar">دولتشاه بن علی</span></span><span class="tkeys"><i aria-hidden="true">_</i><button class="tk-fs" type="button" data-fs aria-label="Full screen" aria-pressed="false" title="Full screen"><svg class="o" viewBox="0 0 10 10" aria-hidden="true"><rect x="1.5" y="1.5" width="7" height="7"/></svg><svg class="x" viewBox="0 0 10 10" aria-hidden="true"><path d="M3.5 3.5V1.5h5v5h-2M1.5 3.5h5v5h-5z"/></svg></button><i aria-hidden="true">×</i></span></div>
     <div class="wbody">
       <nav class="rail" aria-label="Work sections"></nav>
       <div class="scroll" tabindex="0">
@@ -1458,26 +1464,24 @@ tr.hl td{background:#dfe7ff;font-weight:700}
   });
 
   /* ---------------- full screen ---------------- */
-  const fsBtn = $("#fs"), root = document.documentElement;
+  const fsBtns = $$("[data-fs]"), root = document.documentElement;
   const fsEl = () => document.fullscreenElement || document.webkitFullscreenElement;
   if (root.requestFullscreen || root.webkitRequestFullscreen) {
-    fsBtn.hidden = false;
-    fsBtn.addEventListener("click", () => {
+    $("#fs").hidden = false;
+    fsBtns.forEach(b => b.addEventListener("click", () => {
       try {
         const pr = fsEl() ? (document.exitFullscreen || document.webkitExitFullscreen).call(document)
                           : (root.requestFullscreen || root.webkitRequestFullscreen).call(root);
         if (pr && pr.catch) pr.catch(() => {});
       } catch (e) {}
-    });
+    }));
     const sync = () => {
-      const on = !!fsEl();
-      fsBtn.setAttribute("aria-pressed", String(on));
-      fsBtn.setAttribute("aria-label", on ? "Exit full screen" : "Full screen");
-      fsBtn.title = on ? "Exit full screen" : "Full screen";
+      const on = !!fsEl(), lbl = on ? "Exit full screen" : "Full screen";
+      fsBtns.forEach(b => { b.setAttribute("aria-pressed", String(on)); b.setAttribute("aria-label", lbl); b.title = lbl; });
     };
     document.addEventListener("fullscreenchange", sync);
     document.addEventListener("webkitfullscreenchange", sync);
-  }
+  } else fsBtns.forEach(b => { b.disabled = true; b.removeAttribute("title"); });
 
   /* ---------------- copy + toast ---------------- */
   function toast(msg) {

@@ -1,6 +1,6 @@
 # Vagabond1105.github.io
 
-Portfolio and CV builder for Davlatsho Shirinbekov.
+Portfolio for Davlatsho Shirinbekov.
 
 ## Deploy
 1. Create a public repo named `Vagabond1105.github.io`.
@@ -17,5 +17,4 @@ The profile photo is shown as a dithered dossier scan (hover or tap shows the or
 Background video: drop `assets/wallpaper.mp4` (and optionally `assets/wallpaper.webm`) in and it replaces the animated wave automatically.
 
 ## Editing
-All content is in `index.html`. CV entries live in the `const E = [...]` list near the bottom.
-Your phone number is never stored in the site; type it into the CV builder and it stays in your browser.
+All content is in `index.html`.

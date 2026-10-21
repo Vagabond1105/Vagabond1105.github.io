@@ -11,7 +11,7 @@
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}</style>
 <title>Davlatsho Shirinbekov</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Davlatsho Shirinbekov (Vagabond1105): theoretical physics at UCL. Plates, DBZPinch1105, FREE1105, UniSpouse, work and a CV builder.">
+<meta name="description" content="Davlatsho Shirinbekov (Vagabond1105): theoretical physics at UCL. Plates, DBZPinch1105, FREE1105, UniSpouse and work.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Aref+Ruqaa:wght@400;700&family=Doto:wght@700;900&family=Exo+2:wght@400;500;600;700;800&family=Michroma&family=Share+Tech+Mono&family=Silkscreen&family=VT323&display=swap">
@@ -107,8 +107,6 @@ a{color:var(--cobalt);text-underline-offset:3px;font-weight:600}
 .rocker .ctl:last-child{border-radius:0 15px 15px 0;border-left:0}
 .fp-lbl{font-family:var(--f-title);font-size:9px;letter-spacing:.18em;color:var(--ink-dim);white-space:nowrap}
 .grille{flex:1;height:20px;max-width:260px;background:radial-gradient(circle,#3c4350 1.3px,transparent 1.8px) 0 0/7px 7px;opacity:.55;border-radius:4px}
-.face{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-size:0}
-.face svg{width:20px;height:20px}
 .pwr{display:flex;align-items:center;gap:6px;font-family:var(--f-title);font-size:9px;letter-spacing:.16em;color:var(--ink-dim)}
 .pwr i{width:7px;height:7px;border-radius:50%;background:#33e07a;box-shadow:0 0 6px #33e07a}
 
@@ -122,9 +120,6 @@ a{color:var(--cobalt);text-underline-offset:3px;font-weight:600}
 .tab[aria-selected="true"]{opacity:1;transform:scale(1.2)}
 .tab[aria-selected="true"] svg{filter:drop-shadow(0 2px 0 rgba(0,0,0,.6)) drop-shadow(0 0 10px rgba(255,255,255,.8)) drop-shadow(0 0 22px rgba(var(--holo-rgb),.6))}
 .tab[aria-selected="true"] .lbl{opacity:1;transform:translate(-50%,0)}
-.tab.tool{margin-left:clamp(2px,1.6vw,22px)}
-.tab.tool::before{content:"";position:absolute;left:calc(-1 * clamp(2px,1.2vw,18px));top:8px;height:34px;border-left:1px dashed rgba(255,255,255,.25)}
-.tab.tool .lbl{opacity:.9;transform:translate(-50%,0)}
 
 /* =============== stage + projected windows =============== */
 .stage{position:relative;z-index:2;min-height:0;overflow:hidden;overflow:clip;overflow-clip-margin:12px}
@@ -536,64 +531,9 @@ tr.hl td{background:#dfe7ff;font-weight:700}
 .int-list div{display:grid;grid-template-columns:28px 1fr;gap:8px;align-items:center;font-weight:600}
 .int-list div i{font-style:normal;font-family:var(--f-px);font-size:11px;color:#fff;background:#4e52c4;border:2px solid #26251b;text-align:center;padding:2px 0}
 
-/* =============== CV vendor =============== */
-.vendor{position:fixed;inset:0;z-index:70;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr);place-items:center;background:rgba(2,4,6,.74);
-  padding:max(14px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(14px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
-.v-shell{min-width:0;width:min(1240px,100%);height:100%;max-height:900px;display:grid;grid-template-rows:auto minmax(0,1fr) auto;gap:14px}
-.v-main{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:14px;min-height:0}
-.v-inv,.v-prev{min-height:0}
-.v-inv .scr{overflow-y:auto;padding:14px 16px 18px;display:grid;gap:16px;align-content:start;scrollbar-width:thin;scrollbar-color:#77735a transparent}
-.v-lbl{font-family:var(--f-px);font-size:11px;letter-spacing:.08em;color:#cfcaa2;text-transform:uppercase}
-#presets button{appearance:none;cursor:pointer;border:3px solid #26251b;background:linear-gradient(180deg,#7276ec,#4e52c4);color:#05060c;font-family:var(--f-px);font-size:11px;padding:8px 4px 6px;display:grid;justify-items:center;gap:4px;outline-offset:3px}
-#presets button svg{width:28px;height:28px;fill:none;stroke:#05060c;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
-#presets button[aria-pressed="true"]{border-color:#d9d27e;box-shadow:0 0 0 1px #000,0 0 14px rgba(217,210,126,.5)}
-.inv-g{display:grid;gap:6px}
-.inv-i{display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:start;padding:7px 8px;border:1px solid #1d1f16;background:#0b0c09;cursor:pointer;color:#e9e6cf}
-.inv-i:hover{border-color:#6a6649}
-.inv-i input{appearance:none;width:18px;height:18px;margin:2px 0 0;border:2px solid #77735a;background:#000;display:grid;place-items:center;cursor:pointer}
-.inv-i input:checked{background:var(--led);border-color:var(--led);box-shadow:0 0 8px rgba(77,255,124,.6)}
-.inv-i input:checked::after{content:"";width:6px;height:10px;border:solid #03200b;border-width:0 2.5px 2.5px 0;transform:rotate(45deg) translate(-1px,-1px)}
-.inv-i b{display:block;font-weight:600;font-size:14px}
-.inv-i small{color:#9c987c;font-size:12px}
-.inv-i .tg{display:flex;flex-wrap:wrap;gap:4px;margin-top:3px}
-.inv-i .tg i{font-style:normal;font-family:var(--f-mono);font-size:10.5px;color:#b7b3e8;border:1px solid #3b3d72;padding:0 5px}
-.fields{display:grid;gap:8px}
-.fields label{display:grid;gap:3px;font-size:12px;color:#cfcaa2}
-.fields input[type=tel],.fields select{font:inherit;font-size:14px;background:#000;color:#fff;border:1px solid #77735a;padding:6px 8px;width:100%}
-.fields .hint{color:#9c987c;font-size:11.5px}
-.v-prev .scr{display:grid;grid-template-rows:auto minmax(0,1fr);background:#16170f}
-.fitbar{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 12px;font-family:var(--f-px);font-size:11px;color:#cfcaa2;border-bottom:1px solid #000}
-.fitbar .fit{color:var(--led);text-shadow:0 0 8px rgba(77,255,124,.6)}
-.fitbar .fit.over{color:#ffb44d;text-shadow:0 0 8px rgba(255,180,77,.6)}
-.sheet-wrap{overflow:auto;padding:14px;scrollbar-width:thin;scrollbar-color:#77735a transparent}
-.sheet-box{position:relative;margin-inline:auto}
-.v-bar{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
-.v-bar .rf{padding:8px}
-.v-bar button{appearance:none;cursor:pointer;display:inline-flex;align-items:center;gap:10px;background:#040506;border:0;border-radius:3px;color:#fff;font-family:var(--f-ui);font-weight:800;font-size:18px;padding:8px 18px;box-shadow:inset 0 3px 10px rgba(0,0,0,.9)}
-.v-bar button .g{width:22px;height:22px}
-.v-bar button:hover{color:var(--led)}
-.v-bar .note{align-self:center;color:#cfcaa2;font-size:12px;max-width:36ch}
+
+/* =============== toast =============== */
 .toast{position:fixed;left:50%;bottom:max(24px,env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:90;background:#040506;color:var(--led);font-family:var(--f-px);font-size:12px;padding:8px 16px;border:1px solid var(--led);box-shadow:0 0 14px rgba(77,255,124,.4)}
-.fallback{width:100%;min-height:160px;font:12px/1.5 ui-monospace,monospace;background:#000;color:#fff;border:1px solid #77735a}
-.sheet{width:794px;min-height:1123px;background:#fff;color:#16191d;padding:40px 50px;font-family:var(--f-ui);font-size:12.2px;line-height:1.4;transform-origin:top left;position:absolute;left:0;top:0;outline:none}
-.sheet h1{font-size:26px;font-weight:800;letter-spacing:.01em;line-height:1.1}
-.sheet .cv-contact{margin-top:5px;color:#4b525a;font-size:11.8px;display:flex;flex-wrap:wrap;gap:2px 0}
-.sheet .cv-contact span+span::before{content:"·";margin:0 7px;color:#9aa1a8}
-.sheet section{margin-top:13px}
-.sheet h2{font-size:10.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;border-bottom:1.4px solid #16191d;padding-bottom:3px;margin-bottom:7px}
-.sheet .it{margin-top:7px;break-inside:avoid}
-.sheet .it:first-of-type{margin-top:0}
-.sheet .row{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
-.sheet .row b{font-weight:700}
-.sheet .row .d{color:#4b525a;white-space:nowrap;font-size:11.6px}
-.sheet .role{color:#4b525a;font-style:italic}
-.sheet ul{margin:3px 0 0;padding-left:15px}
-.sheet li{margin-top:1.5px}
-.sheet .sk{display:grid;grid-template-columns:150px 1fr;gap:3px 10px}
-.sheet .sk b{font-weight:700}
-.sheet .pb{position:absolute;left:0;right:0;top:1123px;border-top:2px dashed #ff8a00;pointer-events:none}
-.sheet .pb::after{content:"page 2";position:absolute;right:8px;top:2px;font-size:10px;color:#ff8a00}
-#print-root{display:none}
 
 /* =============== responsive =============== */
 @media (max-width:1100px){
@@ -632,30 +572,21 @@ tr.hl td{background:#dfe7ff;font-weight:700}
   .brand i,.rec span,.batt,.tkeys,.sbar span:not(:first-child){display:none}
   .lip{padding:5px;border-radius:12px}
   .tab .lbl{font-size:11px}
-  .tab:not([aria-selected="true"]) .lbl,.tab.tool .lbl{display:none}
+  .tab:not([aria-selected="true"]) .lbl{display:none}
   .tplate{font-size:9px;letter-spacing:.1em;padding:3px 8px}
   .page{inset:8px 6px 22px}
   .scroll{padding-inline:14px}
   .idx,.mag-steps,.mag-stats{grid-template-columns:1fr}
-  .ammo,#presets{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .ammo{grid-template-columns:repeat(2,minmax(0,1fr))!important}
   .drow3{grid-template-columns:1fr}
   .fp-box{display:none}
   .brand b{font-size:10px;letter-spacing:.12em}
   .plate{white-space:normal}
   .lcd-clock small,#tc{display:none}
-  .v-bar button{font-size:15px;padding:6px 12px}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   .led>span{padding-right:0}
-}
-@media print{
-  @page{size:A4;margin:0}
-  html,body{height:auto;overflow:visible;background:#fff}
-  body>*:not(#print-root){display:none!important}
-  #print-root{display:block}
-  #print-root .sheet{position:static;transform:none!important;width:210mm;min-height:auto;padding:10.6mm 13.2mm}
-  #print-root .pb{display:none}
 }
 </style>
 </head>
@@ -696,9 +627,6 @@ tr.hl td{background:#dfe7ff;font-weight:700}
     <symbol id="i-filter" viewBox="0 0 24 24"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></symbol>
     <symbol id="i-nochat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M3 3l18 18"/></symbol>
     <symbol id="g-x" viewBox="0 0 20 20"><path d="M5 5l10 10M15 5L5 15" stroke="#5b8cff" stroke-width="2.8" stroke-linecap="round" fill="none"/></symbol>
-    <symbol id="g-o" viewBox="0 0 20 20"><circle cx="10" cy="10" r="6" stroke="#ff5a5a" stroke-width="2.8" fill="none"/></symbol>
-    <symbol id="g-t" viewBox="0 0 20 20"><path d="M10 3.5l7 12H3z" stroke="#1fc98a" stroke-width="2.6" stroke-linejoin="round" fill="none"/></symbol>
-    <symbol id="g-s" viewBox="0 0 20 20"><rect x="4" y="4" width="12" height="12" stroke="#ff7cc8" stroke-width="2.6" fill="none"/></symbol>
   </defs>
 </svg>
 
@@ -733,8 +661,6 @@ tr.hl td{background:#dfe7ff;font-weight:700}
           <button class="tab" role="tab" id="t-work" aria-controls="pg-work">
             <svg viewBox="0 0 40 40"><rect x="5" y="12" width="30" height="21" rx="1.5"/><path d="M15 12V7h10v5M5 21h30M18 21v3h4v-3"/></svg><span class="lbl">Work &amp; Interests</span></button>
         </div>
-        <button class="tab tool" id="t-cv" aria-haspopup="dialog" data-open-cv>
-          <svg viewBox="0 0 40 40"><path d="M10 4h14l7 7v25H10z"/><path d="M24 4v7h7M15 18h11M15 23h11M15 28h7"/></svg><span class="lbl">Build CV</span></button>
       </nav>
 
       <main class="stage" id="stage">
@@ -784,8 +710,8 @@ tr.hl td{background:#dfe7ff;font-weight:700}
               <h1 class="big">Davlatsho<br>Shirinbekov</h1>
               <p class="ar ar-big" lang="fa">دولتشاه بن علی</p>
               <p class="lead">I study theoretical physics at UCL and build things alongside it: physics simulators that account for every unit of energy, a training app for lifters that I run as a small business, and a non-profit marriage platform for Muslim students.</p>
-              <p class="prose dim">Everything I've made is on this device. Switch pages with the icons, the arrow keys, or the ◀ ▶ rocker below the screen. △ opens the CV builder, which cuts it all down to one page.</p>
-              <div class="btns"><button class="gbtn" type="button" data-open-cv>△ Build a CV</button><a class="key" href="https://github.com/Vagabond1105" target="_blank" rel="noopener">GitHub</a><a class="key" href="https://www.linkedin.com/in/davlatsho-shirinbekov-301467336/" target="_blank" rel="noopener">LinkedIn</a></div>
+              <p class="prose dim">Everything I've made is on this device. Switch pages with the icons, the arrow keys, or the ◀ ▶ rocker below the screen.</p>
+              <div class="btns"><a class="key" href="https://github.com/Vagabond1105" target="_blank" rel="noopener">GitHub</a><a class="key" href="https://www.linkedin.com/in/davlatsho-shirinbekov-301467336/" target="_blank" rel="noopener">LinkedIn</a></div>
             </div>
           </div>
         </section>
@@ -1381,14 +1307,13 @@ tr.hl td{background:#dfe7ff;font-weight:700}
           </div></div>
         </section>
 
-        <section class="blk" data-rail="Get in touch" data-sub="Email · CV" data-ico="i-mail">
+        <section class="blk" data-rail="Get in touch" data-sub="Email" data-ico="i-mail">
           <h2 class="plate">Get in touch</h2>
           <div class="sunk contact">
             <div><span class="lab">EMAIL</span><span class="val">davlatshoshirinbekov@outlook.com</span><button class="key" type="button" data-copy="davlatshoshirinbekov@outlook.com">Copy</button></div>
             <div><span class="lab">GITHUB</span><a href="https://github.com/Vagabond1105" target="_blank" rel="noopener">github.com/Vagabond1105</a></div>
             <div><span class="lab">LINKEDIN</span><a href="https://www.linkedin.com/in/davlatsho-shirinbekov-301467336/" target="_blank" rel="noopener">linkedin.com/in/davlatsho-shirinbekov</a></div>
           </div>
-          <div class="btns"><button class="gbtn" type="button" data-open-cv style="--sig:#1f8a4c">△ Build a CV from this site</button></div>
         </section>
       </div>
     </div>
@@ -1408,53 +1333,9 @@ tr.hl td{background:#dfe7ff;font-weight:700}
     <span class="fp-lbl">PAGE</span>
     <span class="grille" aria-hidden="true"></span>
     <span class="pwr" aria-hidden="true"><i></i><span class="fp-lbl hide-s">POWER</span></span>
-    <span class="sp"></span>
-    <span class="fp-lbl hide-s">BUILD CV</span>
-    <button class="ctl face" type="button" data-open-cv aria-label="Build a CV"><svg aria-hidden="true"><use href="#g-t"/></svg></button>
     <span class="screw" aria-hidden="true"></span>
   </footer>
 </div>
-
-<!-- ======================= CV VENDOR ======================= -->
-<div class="vendor" id="vendor" role="dialog" aria-modal="true" aria-labelledby="v-title" hidden>
-  <div class="v-shell">
-    <div class="rf"><div class="scr"><div class="led" id="v-title" aria-label="CV builder"><span>CV BUILDER ·· <span class="ar">دولتشاه بن علی</span> ·· PICK A LOADOUT ·· TICK WHAT GOES ON THE PAGE ·· CLICK THE SHEET TO EDIT ANY LINE ·· </span><span aria-hidden="true">CV BUILDER ·· <span class="ar">دولتشاه بن علی</span> ·· PICK A LOADOUT ·· TICK WHAT GOES ON THE PAGE ·· CLICK THE SHEET TO EDIT ANY LINE ·· </span></div></div></div>
-    <div class="v-main">
-      <div class="rf v-inv"><div class="scr" id="v-inv">
-        <div class="inv-g">
-          <span class="v-lbl">Loadout</span>
-          <div class="ammo" id="presets">
-            <button type="button" data-preset="physics" aria-pressed="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/></svg>PHYSICS</button>
-            <button type="button" data-preset="software" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>SOFTWARE</button>
-            <button type="button" data-preset="data" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>DATA</button>
-            <button type="button" data-preset="all" aria-pressed="false"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="8"/><rect x="3" y="13" width="8" height="8"/><rect x="13" y="13" width="8" height="8"/></svg>ALL</button>
-          </div>
-        </div>
-        <div class="inv-g fields">
-          <span class="v-lbl">Contact line</span>
-          <label for="cv-email">Email
-            <select id="cv-email"><option value="davlatshoshirinbekov@outlook.com">davlatshoshirinbekov@outlook.com</option><option value="zcapdsh@ucl.ac.uk">zcapdsh@ucl.ac.uk</option></select></label>
-          <label for="cv-phone">Phone (optional)
-            <input type="tel" id="cv-phone" autocomplete="tel" placeholder="Add your number for this CV"></label>
-          <span class="hint">Your number is kept in this browser only. It is never part of the published site.</span>
-        </div>
-        <div id="inv-list" style="display:grid;gap:16px"></div>
-      </div></div>
-      <div class="rf v-prev"><div class="scr">
-        <div class="fitbar"><span>A4 PREVIEW</span><span class="fit" id="fit">FITS ON ONE PAGE</span></div>
-        <div class="sheet-wrap" id="sheet-wrap"><div class="sheet-box" id="sheet-box"><div class="sheet" id="sheet" contenteditable="true" spellcheck="false" aria-label="CV preview, editable"></div></div></div>
-      </div></div>
-    </div>
-    <div class="v-bar">
-      <div class="rf"><button type="button" id="v-copy"><svg class="g"><use href="#g-s"/></svg>Copy text</button></div>
-      <div class="rf" id="v-print-wrap"><button type="button" id="v-print"><svg class="g"><use href="#g-o"/></svg>Save as PDF</button></div>
-      <span class="note" id="v-print-note" hidden>PDF export runs on the live site. Open it at vagabond1105.github.io and press Save as PDF.</span>
-      <div class="rf"><button type="button" id="v-reset"><svg class="g"><use href="#g-x"/></svg>Reset edits</button></div>
-      <div class="rf"><button type="button" id="v-exit"><svg class="g"><use href="#g-t"/></svg>Exit</button></div>
-    </div>
-  </div>
-</div>
-<div id="print-root" aria-hidden="true"></div>
 
 <script>
 (() => {
@@ -1462,10 +1343,6 @@ tr.hl td{background:#dfe7ff;font-weight:700}
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const store = {
-    get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
-    set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
-  };
   const hoverable = matchMedia("(hover:hover)").matches;
 
   /* ---------------- clock + tape counter ---------------- */
@@ -1526,7 +1403,6 @@ tr.hl td{background:#dfe7ff;font-weight:700}
   $$("[data-nav]").forEach(b => b.addEventListener("click", () => show(cur + Number(b.dataset.nav))));
 
   document.addEventListener("keydown", e => {
-    if (!vendor.hidden) { if (e.key === "Escape") closeCV(); return; }
     const tg = e.target;
     if (tg.closest && tg.closest("input,textarea,select,[contenteditable='true']")) return;
     if (e.altKey || e.ctrlKey || e.metaKey) return;
@@ -1867,185 +1743,6 @@ tr.hl td{background:#dfe7ff;font-weight:700}
   show(start >= 0 ? start : 0);
   if (reduce) { drawWaveOnce(); scopes.forEach(s => scope(s, 0)); }
   else requestAnimationFrame(loop);
-
-  /* =================== CV BUILDER =================== */
-  const vendor = $("#vendor");
-  const PROFILE = { name: "Davlatsho Shirinbekov", github: "github.com/Vagabond1105", linkedin: "linkedin.com/in/davlatsho-shirinbekov-301467336", location: "London, UK" };
-  const SECTIONS = [["edu", "Education"], ["proj", "Projects"], ["exp", "Experience"], ["skills", "Skills"], ["extra", "Languages & interests"]];
-  const E = [
-    { id: "ucl", sec: "edu", fixed: true, title: "University College London", date: "2024 – 2028", role: "MSci Theoretical Physics · Year 3 of 4 · on track for a 2:1", tags: ["physics", "software", "data"],
-      bullets: ["Mathematics: Mathematical Methods I–III, Mathematical Methods for Theoretical Physics, and Mathematics for Physics and Astronomy (complex analysis, calculus of variations, group theory).", "Year 3: Mathematics for General Relativity; Theory of Dynamical Systems. Computing: Computational Physics."] },
-    { id: "alevels", sec: "edu", title: "A-levels", date: "2024", line: "Mathematics A*, Further Mathematics A, Physics A, Computer Science C", tags: ["physics", "software", "data"] },
-    { id: "gcse", sec: "edu", title: "GCSEs", date: "2022", line: "Eleven GCSEs: nine at grade 9, one 8, one 7", tags: ["physics", "general"] },
-    { id: "dbz", sec: "proj", title: "DBZPinch1105", role: "3D plasma (Z-pinch) MHD simulator with ML outcome prediction · github.com/Vagabond1105/DBZPinch1105-v9001", date: "Jan – Oct 2026", tags: ["physics", "data", "software"],
-      bullets: [
-        "Designed a real-time 3D resistive MHD simulator of a self-pinching plasma column (HLLD Riemann solver, GLM divergence cleaning, numba kernels, GPU volume rendering) whose energy budget closes to about 10⁻¹⁶.",
-        "Directed an analysis layer, built with Claude Code, trained on a 2,902-run overnight parameter sweep: the outcome predictor scores 94.3% on held-out runs, against 67.6% for the textbook Kruskal–Shafranov criterion alone.",
-        "The sweep recovered the Kruskal–Shafranov kink criterion with no physics put in by hand. Python, NumPy, numba, scikit-learn, PyQt5, vispy."] },
-    { id: "plates", sec: "proj", title: "Plates", role: "Solo founder · local-first training tracker for lifters · plates.cloud", date: "Jul 2026 – present", tags: ["software", "general"],
-      bullets: [
-        "Designed and launched a training tracker with desktop (Electron), web and Android (Expo / React Native) clients from one shared codebase: free on-device, with paid cloud sync.",
-        "Engineered agentically with Claude Code from my spec: an offline-first sync engine (trigger-written outbox, tombstones, last-write-wins with conflicts kept) on Cloudflare Workers, PostgreSQL and R2.",
-        "Auth, HMAC-verified Stripe webhooks and GDPR consent built from scratch; about 1,000 automated tests (node:test, PGlite, Playwright)."] },
-    { id: "free", sec: "proj", title: "FREE1105", role: "2D classical electrodynamics sandbox, playable in the browser · github.com/Vagabond1105/FREE1105", date: "Nov 2025 – Oct 2026", tags: ["physics", "data"],
-      bullets: [
-        "Designed the physics and architecture without physics libraries: softened Coulomb forces, impulse collisions, a live potential heatmap and a 3D potential surface.",
-        "Compared Euler, RK2, RK4 and Velocity-Verlet integrators; the symplectic scheme keeps the energy error below 1.2×10⁻⁹ over 50 orbits with no drift.",
-        "Designed a Larmor radiation model that matches the analytic rate to 0.03%. 19 automated tests run on every push, and a WebAssembly build runs in the browser."] },
-    { id: "unispouse", sec: "proj", title: "UniSpouse", role: "Founder · non-profit marriage platform for Muslim students · unispouse.com", date: "Jul 2026", tags: ["software", "general"],
-      bullets: [
-        "Designed and launched a verified, wali-mediated marriage platform for Muslim university students and alumni in the UK, US, Canada and Australia; engineered agentically with Claude Code.",
-        "Next.js 15 and React 19 on PostgreSQL (Neon) with raw parameterised SQL; custom auth, privacy-gated matching inside a database transaction, and Stripe Checkout with a signed webhook and daily expiry cron."] },
-    { id: "spider", sec: "exp", title: "Full-stack Developer (freelance)", role: "Spider · usespider.ai", date: "Sep 2026", tags: ["software", "data"],
-      bullets: ["Built a demo MVP of an AI study tool on scraped UCL Moodle data: a progression checklist, personalised study features, highlighted source resources and automatically written summary documents. Agentically engineered; deployed on Vercel."] },
-    { id: "forest", sec: "exp", title: "Warehouse Operative", role: "Forest Bike · 3 weeks, full-time", date: "Summer 2025", tags: ["general"],
-      bullets: ["Bike disassembly and assembly, stocking shelves, cleaning and heavy lifting."] },
-    { id: "sk-py", sec: "skills", title: "Python", line: "NumPy, numba, scikit-learn, matplotlib, PyQt5, vispy (OpenGL), pygame, pytest", tags: ["physics", "software", "data"] },
-    { id: "sk-web", sec: "skills", title: "Web & apps", line: "TypeScript, React, Next.js, Electron, Expo / React Native, Cloudflare Workers, PostgreSQL, SQLite, Stripe, Playwright", tags: ["software"] },
-    { id: "sk-num", sec: "skills", title: "Numerical methods", line: "Finite-volume MHD, Riemann solvers (HLLD, HLL), symplectic and Runge–Kutta integrators, validation against exact solutions", tags: ["physics", "data"] },
-    { id: "sk-ml", sec: "skills", title: "Machine learning", line: "Gradient-boosted trees, parameter sweeps, held-out evaluation, calibration", tags: ["data", "physics"] },
-    { id: "sk-math", sec: "skills", title: "Mathematics", line: "Complex analysis, linear algebra, ODEs and PDEs, Fourier analysis, differential geometry and general relativity, dynamical systems and chaos, group theory", tags: ["physics", "data"] },
-    { id: "sk-ai", sec: "skills", title: "AI engineering", line: "Spec-first agentic development with Claude Code", tags: ["software", "data"] },
-    { id: "langs", sec: "extra", title: "Languages", line: "English (British Dialect); Pamiri (blend of Shughni & Rushani dialects); learning Arabic and Russian", tags: ["physics", "software", "data", "general"] },
-    { id: "ints", sec: "extra", title: "Interests", line: "Powerlifting, Streetlifting & Bodybuilding · Grappling and Combat Sports · Comparative Theology & Philosophy (Sunni Hanbali Athari Muslim) · Basic History, Geopolitics & Civilisational Dynamics", tags: ["physics", "software", "data", "general"] }
-  ];
-  const sel = new Set();
-  E.forEach(e => { if (e.fixed || e.tags.includes("physics") || e.sec === "extra") sel.add(e.id); });
-  const phoneIn = $("#cv-phone"), emailIn = $("#cv-email");
-  phoneIn.value = store.get("cv.phone") || "";
-  const savedEmail = store.get("cv.email"); if (savedEmail) emailIn.value = savedEmail;
-  const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-
-  function renderInv() {
-    const host = $("#inv-list"); host.innerHTML = "";
-    SECTIONS.forEach(([key, name]) => {
-      const items = E.filter(e => e.sec === key); if (!items.length) return;
-      const g = document.createElement("div"); g.className = "inv-g";
-      g.innerHTML = `<span class="v-lbl">${esc(name)}</span>`;
-      items.forEach(e => {
-        const lab = document.createElement("label"); lab.className = "inv-i";
-        lab.innerHTML = `<input type="checkbox" id="cv-${e.id}" ${sel.has(e.id) ? "checked" : ""} ${e.fixed ? "disabled" : ""}>
-          <span><b>${esc(e.title)}</b><small>${esc(e.date || "")}${e.fixed ? " · always included" : ""}</small>
-          <span class="tg">${e.tags.map(t => `<i>${t}</i>`).join("")}</span></span>`;
-        const cb = $("input", lab);
-        cb.addEventListener("change", () => { cb.checked ? sel.add(e.id) : sel.delete(e.id); setPreset(null); renderSheet(); });
-        g.appendChild(lab);
-      });
-      host.appendChild(g);
-    });
-  }
-  function setPreset(p) { $$("#presets button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.preset === p))); }
-  $$("#presets button").forEach(b => b.addEventListener("click", () => {
-    const p = b.dataset.preset;
-    sel.clear();
-    E.forEach(e => { if (e.fixed || p === "all" || e.tags.includes(p) || e.sec === "extra") sel.add(e.id); });
-    setPreset(p); renderInv(); renderSheet();
-  }));
-  function contactBits() {
-    const bits = [emailIn.value];
-    const ph = phoneIn.value.trim(); if (ph) bits.push(ph);
-    bits.push(PROFILE.github, PROFILE.linkedin, PROFILE.location);
-    return bits;
-  }
-  function renderSheet() {
-    const sheet = $("#sheet");
-    let h = `<h1>${esc(PROFILE.name)}</h1><p class="cv-contact">${contactBits().map(b => `<span>${esc(b)}</span>`).join("")}</p>`;
-    SECTIONS.forEach(([key, name]) => {
-      const items = E.filter(e => e.sec === key && sel.has(e.id)); if (!items.length) return;
-      h += `<section><h2>${esc(name)}</h2>`;
-      if (key === "skills" || key === "extra") h += `<div class="sk">${items.map(e => `<b>${esc(e.title)}</b><span>${esc(e.line)}</span>`).join("")}</div>`;
-      else items.forEach(e => {
-        h += `<div class="it"><div class="row"><b>${esc(e.title)}</b><span class="d">${esc(e.date || "")}</span></div>`;
-        if (e.role) h += `<div class="role">${esc(e.role)}</div>`;
-        if (e.line) h += `<div>${esc(e.line)}</div>`;
-        if (e.bullets) h += `<ul>${e.bullets.map(b => `<li>${esc(b)}</li>`).join("")}</ul>`;
-        h += `</div>`;
-      });
-      h += `</section>`;
-    });
-    h += `<div class="pb" id="pb" hidden></div>`;
-    sheet.innerHTML = h;
-    measure();
-  }
-  function measure() {
-    const sheet = $("#sheet"), pb = $("#pb");
-    const kids = [...sheet.children].filter(c => c.id !== "pb");
-    const bottom = kids.length ? Math.max(...kids.map(c => c.offsetTop + c.offsetHeight)) + 40 : 0;
-    const over = bottom > 1123, fit = $("#fit");
-    fit.textContent = over ? "RUNS TO 2 PAGES · UNTICK SOMETHING" : "FITS ON ONE PAGE";
-    fit.classList.toggle("over", over);
-    if (pb) pb.hidden = !over;
-    scaleSheet();
-  }
-  function scaleSheet() {
-    const wrap = $("#sheet-wrap"), box = $("#sheet-box"), sheet = $("#sheet");
-    const avail = wrap.clientWidth - 28; if (avail <= 0) return;
-    const s = Math.min(1, avail / 794);
-    sheet.style.transform = `scale(${s})`;
-    box.style.width = 794 * s + "px";
-    box.style.height = Math.max(1123, sheet.offsetHeight) * s + "px";
-  }
-  $("#sheet").addEventListener("input", () => measure());
-  phoneIn.addEventListener("input", () => { store.set("cv.phone", phoneIn.value); renderSheet(); });
-  emailIn.addEventListener("change", () => { store.set("cv.email", emailIn.value); renderSheet(); });
-  addEventListener("resize", () => { if (!vendor.hidden) scaleSheet(); });
-
-  function sheetText() {
-    const s = $("#sheet"), out = [];
-    s.querySelectorAll("h1,.cv-contact,h2,.row,.role,.it>div:not(.row):not(.role),li,.sk").forEach(n => {
-      if (n.matches("h1")) out.push(n.innerText.trim());
-      else if (n.matches(".cv-contact")) out.push([...n.children].map(c => c.innerText.trim()).join(" | "), "");
-      else if (n.matches("h2")) out.push("", n.innerText.trim().toUpperCase());
-      else if (n.matches(".row")) out.push([...n.children].map(c => c.innerText.trim()).filter(Boolean).join("  |  "));
-      else if (n.matches("li")) out.push("- " + n.innerText.trim());
-      else if (n.matches(".sk")) { const c = [...n.children]; for (let i = 0; i < c.length; i += 2) out.push(c[i].innerText.trim() + ": " + (c[i + 1] ? c[i + 1].innerText.trim() : "")); }
-      else out.push(n.innerText.trim());
-    });
-    return out.join("\n").replace(/\n{3,}/g, "\n\n").trim();
-  }
-  $("#v-copy").addEventListener("click", () => {
-    const txt = sheetText();
-    const fallback = () => {
-      let ta = $("#v-fallback");
-      if (!ta) { ta = document.createElement("textarea"); ta.id = "v-fallback"; ta.className = "fallback"; ta.setAttribute("aria-label", "CV as plain text"); $("#v-inv").prepend(ta); }
-      ta.value = txt; ta.focus(); ta.select(); toast("SELECTED · PRESS CTRL/CMD C");
-    };
-    try { navigator.clipboard.writeText(txt).then(() => toast("CV COPIED AS TEXT"), fallback); } catch (e) { fallback(); }
-  });
-  $("#v-reset").addEventListener("click", () => { renderSheet(); toast("EDITS CLEARED"); });
-  let framed = true;
-  try { framed = window.self !== window.top; } catch (e) { framed = true; }
-  function preparePrint() {
-    const root = $("#print-root"); root.innerHTML = "";
-    const c = $("#sheet").cloneNode(true); c.removeAttribute("contenteditable"); c.removeAttribute("id"); c.style.transform = "none";
-    root.appendChild(c);
-  }
-  addEventListener("beforeprint", preparePrint);
-  if (framed) { $("#v-print-wrap").hidden = true; $("#v-print-note").hidden = false; }
-  $("#v-print").addEventListener("click", () => { preparePrint(); window.print(); });
-
-  let lastFocus = null;
-  const device = $(".device");
-  function openCV() {
-    lastFocus = document.activeElement;
-    vendor.hidden = false;
-    $("#t-cv").setAttribute("aria-expanded", "true");
-    device.inert = true;
-    renderInv(); renderSheet();
-    requestAnimationFrame(scaleSheet);
-    ($("#presets button[aria-pressed='true']") || $("#presets button")).focus();
-  }
-  function closeCV() {
-    vendor.hidden = true;
-    device.inert = false;
-    $("#t-cv").setAttribute("aria-expanded", "false");
-    if (lastFocus && lastFocus.focus) lastFocus.focus();
-  }
-  $$("[data-open-cv]").forEach(b => b.addEventListener("click", openCV));
-  $("#v-exit").addEventListener("click", closeCV);
-  vendor.addEventListener("click", e => { if (e.target === vendor) closeCV(); });
-  if (initialHash === "cv") openCV();
-  renderSheet();
 })();
 </script>
 </body>
